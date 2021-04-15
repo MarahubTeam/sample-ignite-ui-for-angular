@@ -1,0 +1,28 @@
+<div class="layout-box" igxLayout igxLayoutDir="row">
+  <div class="layout-box__el" igxFlex>
+    <form>
+      <igx-input-group>
+        <input igxInput name="fullName" type="text" />
+        <label igxLabel for="fullName">Full Name</label>
+      </igx-input-group>
+      <igx-input-group>
+        <input igxInput [igxTextSelection]="true" [(ngModel)]="email" name="email" type="text" />
+        <label igxLabel for="email">Email</label>
+      </igx-input-group>
+      <div>
+        <igx-checkbox checked="true">
+          Simple checkbox
+        </igx-checkbox>
+      </div>
+
+      <div>
+        <igx-radio *ngFor="let color of colors" name="color" [value]="color.hex" [(ngModel)]="selectedColor">
+          {{color.name}}
+        </igx-radio>
+      </div>
+      <button igxButton="raised" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
+        SUBMIT
+      </button>
+    </form>
+  </div>
+</div>

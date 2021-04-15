@@ -3,16 +3,52 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxGridModule } from 'igniteui-angular';
+import { AppRoutingModule } from './app-routing.module';
+import { GridComponent } from './components/grid/grid.component';
+import { NavDrawerSimpleComponent } from "./components/nav/nav.component";
+import { FormComponent } from "./components/form/form.component";
+import {
+  IgxNavigationDrawerModule,
+  IgxToggleModule,
+  IgxAvatarModule,
+  IgxBadgeModule,
+  IgxButtonModule,
+  IgxGridModule,
+  IgxIconModule,
+  IgxInputGroupModule,
+  IgxProgressBarModule,
+  IgxRippleModule,
+  IgxSwitchModule,
+  IgxCheckboxModule,
+  IgxRadioModule
+} from "igniteui-angular";
+import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GridComponent,
+    NavDrawerSimpleComponent,
+    FormComponent
   ],
   imports: [
+    IgxPreventDocumentScrollModule,
     BrowserModule,
     BrowserAnimationsModule,
-    IgxGridModule
+    IgxNavigationDrawerModule,
+    AppRoutingModule,
+    IgxToggleModule,
+    IgxAvatarModule,
+    IgxBadgeModule,
+    IgxButtonModule,
+    IgxGridModule,
+    IgxIconModule,
+    IgxInputGroupModule,
+    IgxProgressBarModule,
+    IgxRippleModule,
+    IgxSwitchModule,
+    IgxCheckboxModule,
+    IgxRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
